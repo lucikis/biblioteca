@@ -39,8 +39,9 @@ public class DialogInventar extends JDialog {
 
         for (int i = 0; i < listaCartiDisponibile.size(); i++) {
             Carte carte = listaCartiDisponibile.get(i);
+
             data[i][0] = carte.getTitlu();
-            data[i][1] = String.join(", ", carte.getAutori());
+            data[i][1] = (carte.getAutori() != null ? String.join(", ", carte.getAutori()) : "Fara autori");
             data[i][2] = carte.getIsbn();
             data[i][3] = carte.getEditura();
             data[i][4] = carte.getLimba();
